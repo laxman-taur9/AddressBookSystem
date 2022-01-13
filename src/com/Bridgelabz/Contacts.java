@@ -54,7 +54,7 @@ public class Contacts {
 	}
 	
 	public String getZip() {
-		return firstName;
+		return zip;
 	}
 	public void setZip(String zip) {
 		this.zip = zip;
