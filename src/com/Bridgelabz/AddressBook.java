@@ -1,9 +1,11 @@
 package com.Bridgelabz;
 
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class AddressBook {
 
+	ArrayList<Contacts> contactList = new ArrayList<>();
 	private Scanner scanner=new Scanner(System.in);
 	public Contacts addContacts() {
 		
@@ -52,4 +54,41 @@ public class AddressBook {
 		System.out.println("Mobile No "+contacts.getMobileNo());
 		
 	}
+//Method to Edit the Exisitng Contact
+	public void editContact() {
+		//Get First name to Edit the Contact
+		System.out.println("Enter the First Name :");
+		String firstName = scanner.next();
+		
+		//check if the given User with First name
+		boolean isAvailable = false;
+		for(Contacts contact : contactList) {
+		if(firstName.equalsIgnoreCase(contact.getFirstName())) {
+			isAvailable = true;
+			System.out.println("Enter the Last Name:");
+			contact.setLastName(scanner.next());
+			System.out.println("Enter the Address:");
+			contact.setAddress(scanner.next());
+			System.out.println("Enter the City:");
+			contact.setCity(scanner.next());
+			System.out.println("Enter the State");
+			contact.setState(scanner.next());
+			System.out.println("Enter the Zip Code:");
+			contact.setZip(scanner.next());
+			System.out.println("Enter the phone number:");
+			contact.setMobileNo(scanner.next());
+			System.out.println("Enter Email id:");
+			contact.setEmail(scanner.next());
+			
+		}
+	}
+      if(!isAvailable) {
+    	  System.out.println("Contact Number Not Found.");
+      }
+
+	}
+	
 }
+
+
+
