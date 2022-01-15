@@ -88,7 +88,29 @@ public class AddressBook {
 
 	}
 	
+	// Method to Delete the Existing contact
+	public void deleteContact() {
+		//Get first Name to Edit the contact
+		System.out.println("Enter The first Name:");
+		String firstName = scanner.next();
+		
+		//check if the Given User with First Name
+		boolean isAvailable = false;
+		for(Contacts contact : contactList) {
+			if(firstName.equalsIgnoreCase(contact.getFirstName()));
+			isAvailable=true;
+			contactList.remove(contact);
+			System.out.println("Contact Deleted.");
+			break;
+			
+		}
+	
+	if(!isAvailable) {
+		System.out.println("Contact Number Not Found.");
+	}
 }
+}
+
 
 
 
