@@ -6,7 +6,7 @@ import java.util.ArrayList;
 public class AddressBook {
 
 	ArrayList<Contacts> contactList = new ArrayList<>();
-	private Scanner scanner=new Scanner(System.in);
+ Scanner scanner=new Scanner(System.in);
 	public Contacts addContacts() {
 		
 		Contacts contacts = new Contacts();
