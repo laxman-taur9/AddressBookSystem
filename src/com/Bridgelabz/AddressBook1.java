@@ -40,7 +40,7 @@ public class AddressBook1 {
 	        System.out.println("Enter the Address Book Name :");
 	        String addressbookName = scanner.next();
 	        if(checkAddressBook(addressbookName)) {
-	            addressBookMap.get(addressbookName).contactOptions(addressBookMap.get(addressbookName));
+	            addressBookMap.get(addressbookName).contactOptions(addressBookMap.get(AddressBook));
 	        } else {
 	            System.out.println("Entered Address Book Name is Invalid");
 	        }
