@@ -1,4 +1,6 @@
 package com.Bridgelabz;
+import java.util.HashMap;
+import java.util.Map;
 
 public class AddressBookMain {
 
@@ -6,9 +8,9 @@ public class AddressBookMain {
 		int choice;
 		AddressBook addressBook = new AddressBook();
 		Contacts contacts = addressBook.addContacts();
-		addressBook.showContacts(contacts);
-		addressBook.editContact();
-		addressBook.deleteContact();
+		//addressBook.showContacts(contacts);
+		//addressBook.editContact();
+		//addressBook.deleteContact();
 		
 		do {
             System.out.println("Address Book System");
@@ -22,6 +24,7 @@ public class AddressBookMain {
             	break;
             case 2:
             	addressBook.showContacts(contacts);
+            //	AddressBook1.showContacts(contacts);
             	break;
             case 3:
             	addressBook.editContact();
